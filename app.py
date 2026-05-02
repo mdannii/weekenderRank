@@ -133,6 +133,9 @@ HTML_TEMPLATE = """
         <button onclick="switchTab('results')" class="nav-item flex flex-col items-center gap-1 text-slate-400" id="nav-results">
             <i data-lucide="bar-chart-2"></i><span class="text-[10px] font-bold uppercase">Rank</span>
         </button>
+        <button onclick="switchTab('teams')" class="nav-item flex flex-col items-center gap-1 text-slate-400" id="nav-teams">
+            <i data-lucide="users"></i><span class="text-[10px] font-bold uppercase">Teams</span>
+        </button>
     </nav>
 
     <div id="loginModal" class="fixed inset-0 bg-slate-900/40 backdrop-blur-sm z-50 hidden items-center justify-center p-4">
@@ -292,6 +295,65 @@ HTML_TEMPLATE = """
                                     </div>
                                 </div>
                             `).join('')}
+                        </div>
+                    </div>
+                `;
+            } else if (state.activeTab === 'teams') {
+                const leaderboard = state.players.map(p => {
+                    const scores = Object.values(state.submissions).map(s => s[p.name]).filter(v => v !== undefined);
+                    const avg = scores.length ? (scores.reduce((a,b)=>a+parseInt(b),0) / scores.length).toFixed(1) : 0;
+                    return { name: p.name, avg: parseFloat(avg) };
+                }).sort((a,b) => b.avg - a.avg);
+
+                const teamA = [];
+                const teamB = [];
+
+                leaderboard.forEach((player, index) => {
+                    if (index % 2 === 0) teamA.push(player);
+                    else teamB.push(player);
+                });
+
+                container.innerHTML = `
+                    <div class="space-y-6">
+                        <div class="bg-white p-6 rounded-3xl border border-slate-100">
+                            <h2 class="text-xl font-bold mb-2">Balanced Teams</h2>
+                            <p class="text-slate-500 text-sm mb-6">Split based on alternating ranking positions to balance skill level.</p>
+                            
+                            <div class="grid grid-cols-2 gap-4">
+                                <!-- Team A -->
+                                <div class="space-y-4">
+                                    <div class="flex items-center gap-2 mb-2">
+                                        <div class="w-2 h-2 rounded-full bg-indigo-500"></div>
+                                        <h3 class="font-bold text-xs uppercase tracking-widest text-slate-400">Team A</h3>
+                                    </div>
+                                    <div class="space-y-2">
+                                        ${teamA.map(p => `
+                                            <div class="p-3 bg-slate-50 rounded-xl text-sm font-medium border border-slate-100 flex flex-col gap-1">
+                                                <span class="truncate">${p.name}</span>
+                                                <span class="text-[10px] text-slate-400 font-bold">${p.avg}</span>
+                                            </div>
+                                        `).join('')}
+                                        ${teamA.length === 0 ? '<p class="text-xs text-slate-300 italic">No players</p>' : ''}
+                                    </div>
+                                </div>
+
+                                <!-- Team B -->
+                                <div class="space-y-4">
+                                    <div class="flex items-center gap-2 mb-2">
+                                        <div class="w-2 h-2 rounded-full bg-emerald-500"></div>
+                                        <h3 class="font-bold text-xs uppercase tracking-widest text-slate-400">Team B</h3>
+                                    </div>
+                                    <div class="space-y-2">
+                                        ${teamB.map(p => `
+                                            <div class="p-3 bg-slate-50 rounded-xl text-sm font-medium border border-slate-100 flex flex-col gap-1">
+                                                <span class="truncate">${p.name}</span>
+                                                <span class="text-[10px] text-slate-400 font-bold">${p.avg}</span>
+                                            </div>
+                                        `).join('')}
+                                        ${teamB.length === 0 ? '<p class="text-xs text-slate-300 italic">No players</p>' : ''}
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 `;
