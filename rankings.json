@@ -1,130 +1,102 @@
 {
     "players": [
         {
-            "id": "0d336a9c-f345-46ae-b824-f8412716a01c",
-            "name": "Aaron Chen"
+            "id": "624f009a-b6f9-43c3-8e74-66a7b42e5ae3",
+            "name": "Danny"
         },
         {
-            "id": "652f3f49-69d7-40d4-8c13-137df87217e4",
-            "name": "Bella Wu"
+            "id": "c95343c8-9180-41f4-9cc5-98cf3620e4db",
+            "name": "Dev"
         },
         {
-            "id": "c0d3e1e9-8755-4921-baac-af84593e6c51",
-            "name": "Chris Zhang"
+            "id": "b0e307b9-5fa7-404c-8dfa-e49e156f951e",
+            "name": "Dinesh"
         },
         {
-            "id": "b4245a1a-c7bd-4304-9f46-a7e96688b029",
-            "name": "David Lim"
+            "id": "9f17649b-df67-44ee-951c-09d72abca774",
+            "name": "Ibu"
         },
         {
-            "id": "893e9baa-7e31-4b49-9cf3-29d89c69bc1f",
-            "name": "Emma Watson"
+            "id": "eb54bc4d-3d36-49ba-b18e-18423b3070b0",
+            "name": "Joy"
         },
         {
-            "id": "7d74ed26-14d6-4bbe-896a-9436eb122058",
-            "name": "Felix Ng"
+            "id": "e60b343c-482b-417b-83f7-40253f535104",
+            "name": "Justin"
         },
         {
-            "id": "322c60d6-6e38-41e6-87b4-bdead3336c72",
-            "name": "Grace Ho"
+            "id": "cb2ec92b-3c62-44c0-b93e-f12be2bbb2fd",
+            "name": "Malem"
         },
         {
-            "id": "b5004647-e9d6-43c5-866f-6ede6e584399",
-            "name": "Henry Tan"
+            "id": "ad5e59bb-2cbd-49cf-b110-98ee9e4375fc",
+            "name": "Nilakanta"
         },
         {
-            "id": "59d019e9-6039-4d2f-9fb9-32998f6cbb2c",
-            "name": "Iris Wong"
+            "id": "03015c14-61ec-4f19-be09-0a785cd7fffe",
+            "name": "Ning"
         },
         {
-            "id": "becbda38-a6e6-4c70-92bd-eb128b396d35",
-            "name": "Jacky Lee"
+            "id": "fe913b46-1882-40ce-a333-42d678033940",
+            "name": "Nishi"
         },
         {
-            "id": "c4a982d4-0ef0-4fe9-a42f-5f11fd006fab",
-            "name": "Kevin Low"
+            "id": "e56ccb67-c931-4360-b682-66524364b632",
+            "name": "Phung"
         },
         {
-            "id": "d3c2aa18-ca85-4ff8-9f1a-99333ba6f483",
-            "name": "Linda Koh"
+            "id": "683d151d-44fe-4a3a-8a2e-92af3a07b142",
+            "name": "Ramesh"
         },
         {
-            "id": "74ddbda7-4d29-4e0a-a54e-42f3de4e2600",
-            "name": "Mike Sim"
+            "id": "fd0cce59-f856-401b-a814-4da5f01fb14b",
+            "name": "Ramkui"
         },
         {
-            "id": "f5e7de3c-8947-4501-a35f-98e47aaa0177",
-            "name": "Nancy Tay"
+            "id": "d4e0c695-7aa6-46ec-bd5e-649b26bb04a3",
+            "name": "Robin"
         },
         {
-            "id": "a175734b-9d04-4b4c-b0c2-cb65b5413521",
-            "name": "Oscar Quek"
+            "id": "e0e605d7-1553-479e-99d8-18985e463be7",
+            "name": "Rohen"
         },
         {
-            "id": "be2bd00c-e927-4eed-8030-9d8becc89c35",
-            "name": "Penny Seah"
+            "id": "a048557e-9535-405a-af62-14071b334b4d",
+            "name": "Sunil"
         },
         {
-            "id": "87d2528e-a186-4445-83d7-e3357bd8756e",
-            "name": "Quincy Phua"
+            "id": "853efbff-7794-4253-b3a2-f2a02379d47c",
+            "name": "Suraj"
         },
         {
-            "id": "d91d7472-4861-4614-9451-4272fd1ff1ef",
-            "name": "Ryan Teo"
+            "id": "bfae295f-11e4-40c8-b921-48a5d7610b70",
+            "name": "Tarun"
         },
         {
-            "id": "b41742d5-256e-4e00-a580-3aba8dcf3a75",
-            "name": "Sarah Ong"
-        },
-        {
-            "id": "62899585-cff0-46b7-8cd7-d40404f93c58",
-            "name": "Toby Yeo"
+            "id": "4610ff5a-3cd3-44c6-a4fc-e7c246ffdfe5",
+            "name": "Victor"
         }
     ],
     "submissions": {
-        "0d336a9c-f345-46ae-b824-f8412716a01c": {
-            "Aaron Chen": "6",
-            "Bella Wu": "7",
-            "Chris Zhang": "8",
-            "David Lim": "8",
-            "Emma Watson": "8",
-            "Felix Ng": "8",
-            "Grace Ho": "9",
-            "Henry Tan": "9",
-            "Iris Wong": "8",
-            "Jacky Lee": "9",
-            "Kevin Low": "9",
-            "Linda Koh": "8",
-            "Mike Sim": "8",
-            "Nancy Tay": 5,
-            "Oscar Quek": 5,
-            "Penny Seah": 5,
-            "Quincy Phua": 5,
-            "Ryan Teo": 5,
-            "Sarah Ong": 5,
-            "Toby Yeo": 5
-        },
-        "652f3f49-69d7-40d4-8c13-137df87217e4": {
-            "Aaron Chen": "6",
-            "Bella Wu": "7",
-            "Chris Zhang": "8",
-            "David Lim": "8",
-            "Emma Watson": "8",
-            "Felix Ng": "8",
-            "Grace Ho": "9",
-            "Henry Tan": "9",
-            "Iris Wong": "8",
-            "Jacky Lee": "9",
-            "Kevin Low": "9",
-            "Linda Koh": "8",
-            "Mike Sim": "8",
-            "Nancy Tay": 5,
-            "Oscar Quek": 5,
-            "Penny Seah": 5,
-            "Quincy Phua": 5,
-            "Ryan Teo": 5,
-            "Sarah Ong": 5,
-            "Toby Yeo": 5
+        "fe913b46-1882-40ce-a333-42d678033940": {
+            "Danny": 5,
+            "Dev": "3",
+            "Dinesh": "10",
+            "Ibu": "10",
+            "Joy": "9",
+            "Justin": 5,
+            "Malem": "10",
+            "Nilakanta": "10",
+            "Ning": "10",
+            "Nishi": "1",
+            "Phung": 5,
+            "Ramesh": 5,
+            "Ramkui": "7",
+            "Robin": "9",
+            "Rohen": "4",
+            "Suraj": "8",
+            "Tarun": "10",
+            "Victor": "7"
         }
     }
 }
