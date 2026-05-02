@@ -5,7 +5,11 @@ from flask import Flask, request, jsonify, render_template_string, session
 
 app = Flask(__name__)
 app.secret_key = os.environ.get("FLASK_SECRET_KEY", "weekender_secret_key_999")
-DATA_FILE = "rankings.json"
+#DATA_FILE = "rankings.json"
+
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+DATA_FILE = os.path.join(BASE_DIR, "rankings.json")
 ADMIN_PASSWORD = os.environ.get("ADMIN_PASSWORD", "admin")
 
 # --- Data Management ---
@@ -317,20 +321,20 @@ HTML_TEMPLATE = """
                     <div class="space-y-6">
                         <div class="bg-white p-6 rounded-3xl border border-slate-100">
                             <h2 class="text-xl font-bold mb-2">Balanced Teams</h2>
-                            <p class="text-slate-500 text-sm mb-6">Split based on alternating ranking positions to balance skill level.</p>
+                            <p class="text-slate-500 text-sm mb-6">Split by alternating positions to balance skill level.</p>
                             
                             <div class="grid grid-cols-2 gap-4">
                                 <!-- Team A -->
                                 <div class="space-y-4">
                                     <div class="flex items-center gap-2 mb-2">
                                         <div class="w-2 h-2 rounded-full bg-indigo-500"></div>
-                                        <h3 class="font-bold text-xs uppercase tracking-widest text-slate-400">Team A</h3>
+                                        <h3 class="font-bold text-[10px] uppercase tracking-widest text-slate-400">Team A</h3>
                                     </div>
                                     <div class="space-y-2">
                                         ${teamA.map(p => `
-                                            <div class="p-3 bg-slate-50 rounded-xl text-sm font-medium border border-slate-100 flex flex-col gap-1">
-                                                <span class="truncate">${p.name}</span>
-                                                <span class="text-[10px] text-slate-400 font-bold">${p.avg}</span>
+                                            <div class="p-2 px-3 bg-slate-50 rounded-xl border border-slate-100 flex items-center justify-between gap-2">
+                                                <span class="truncate text-sm font-medium text-slate-700">${p.name}</span>
+                                                <span class="text-xs text-indigo-600 font-bold">${p.avg}</span>
                                             </div>
                                         `).join('')}
                                         ${teamA.length === 0 ? '<p class="text-xs text-slate-300 italic">No players</p>' : ''}
@@ -341,13 +345,13 @@ HTML_TEMPLATE = """
                                 <div class="space-y-4">
                                     <div class="flex items-center gap-2 mb-2">
                                         <div class="w-2 h-2 rounded-full bg-emerald-500"></div>
-                                        <h3 class="font-bold text-xs uppercase tracking-widest text-slate-400">Team B</h3>
+                                        <h3 class="font-bold text-[10px] uppercase tracking-widest text-slate-400">Team B</h3>
                                     </div>
                                     <div class="space-y-2">
                                         ${teamB.map(p => `
-                                            <div class="p-3 bg-slate-50 rounded-xl text-sm font-medium border border-slate-100 flex flex-col gap-1">
-                                                <span class="truncate">${p.name}</span>
-                                                <span class="text-[10px] text-slate-400 font-bold">${p.avg}</span>
+                                            <div class="p-2 px-3 bg-slate-50 rounded-xl border border-slate-100 flex items-center justify-between gap-2">
+                                                <span class="truncate text-sm font-medium text-slate-700">${p.name}</span>
+                                                <span class="text-xs text-emerald-600 font-bold">${p.avg}</span>
                                             </div>
                                         `).join('')}
                                         ${teamB.length === 0 ? '<p class="text-xs text-slate-300 italic">No players</p>' : ''}
